@@ -20,4 +20,11 @@ public class EmployeesController {
         employees.add(employee);
         return employees;
     }
+
+    @DeleteMapping
+    public List<Employee> delEmployee(@RequestParam int id){
+        List<Employee> employees = Employee.forTestEmployee();
+        employees.remove(id);
+        return employees;
+    }
 }
